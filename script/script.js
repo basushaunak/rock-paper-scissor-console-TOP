@@ -29,8 +29,55 @@ function playRound(roundCount){
     }
     computerChoice=getRandomInteger(0,2);
     playerChoice = choices.indexOf(userInput);
-    console.log("Computer Choice: " + computerChoice);
-    console.log("Player Choice: " + playerChoice);
+    if (playerChoice === computerChoice){
+        console.log("Its a tie! Both player and computer chose " + choices[playerChoice]);
+        return;
+    }
+    let winner = 0; /* 0 = Tie, 1= Player, 2 = Computer */
+    let msg = "";
+    switch (playerChoice){
+        /* Player chose rock */
+        case 0:
+            if(computerChoice===1){
+                winner = 2;
+                msg = choices[computerChoice]+" covers " + choices[playerChoice];
+            } else {
+                winner = 1;
+                msg = choices[playerChoice] + " breaks " + choices[computerChoice];
+            }
+            break;
+        case 1:
+            /* Player chose paper */
+            if (computerChoice === 0){
+                winner = 1;
+                msg = choices[playerChoice]+" covers " + choices[computerChoice];
+            }else{
+                winner = 2;
+                msg = choices[computerChoice]+" cuts " + choices[playerChoice];
+            }
+            break;
+        case 2:
+            /* Player chose scissors */
+            if (computerChoice === 0){
+                winner = 2;
+                msg = choices[computerChoice] + " breaks " + choices[playerChoice];
+            }else{
+                winner = 1;
+                msg = choices[playerChoice]+" cuts " + choices[computerChoice];
+            }
+            break;
+        default:
+            alert("Logical error!!!");
+            return;
+    }
+    if (winner === 1){
+        console.log("Player Won!!\nBecause "+msg);
+        playerScore++;
+    }else{
+        console.log("Computer Won!!\nBecause "+msg);
+        computerScore++;
+    }
+
 }
 
 function playRockPaperScissors(){
@@ -48,6 +95,16 @@ function playRockPaperScissors(){
     }
     for (let i=0;i<totalRounds;i++){
         playRound(i);
+    }
+    console.log("-------------------------------------------\nTOTAL ROUNDS: " + totalRounds)
+    console.log("Final Score\n------------");
+    console.log("User Score: " + playerScore +"\nComputer Score: " + computerScore);
+    if(playerScore > computerScore){
+        console.log("You Won!!!!");
+    }else if(playerScore < computerScore){
+        console.log("Sorry! The computer Won.");
+    } else {
+        console.log("It's a Tie!!!!");
     }
 }
 playRockPaperScissors();
