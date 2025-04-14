@@ -28,7 +28,7 @@ footer{
     margin-inline: auto;
     background-color: #26006e;
     color: white;
-    margin-block-start: 10px;
+    margin-block-start: 20px;
 }
 .heading {
     font-family: "Style Script", cursive;
@@ -105,10 +105,11 @@ footer{
 #round-result{
     margin-block: 10px;
     margin-inline: auto;
-    width: 400px;
+    width: 500px;
     min-height: 10rem;
     max-height: 10rem;
     border: 1px yellow solid;
+    overflow-y: scroll;
 }
 #round-result > p{
     padding-inline-start: 10px;
@@ -119,12 +120,15 @@ footer{
  #final-result{
     margin-block: 10px;
     margin-inline: auto;
-    width: 400px;
-    min-height: 2rem;
-    max-height: 2rem;
+    width: 500px;
+    min-height: 3rem;
+    max-height: 3rem;
     border: 1px orange solid;
+    text-align: center;
+    font-size: 1.5rem;
     display: flex;
-
+    align-items: center;
+    justify-content: center;
  }
 
  #next-round:hover{
@@ -142,13 +146,15 @@ footer{
  #result-pane{
     width: 500px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     margin-inline: auto;    
  }
 
- #final-result{
-    display: block;
-    color: red;
-    text-align: center;
-    font-size: 1.2rem;
- }
+.icons {
+   display: inline-flex;
+   max-width: 1rem;
+   min-width: 1rem;
+   object-fit: cover;
+   align-items: center;
+   justify-content: center;
+}

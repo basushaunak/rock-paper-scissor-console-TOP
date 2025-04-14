@@ -34,8 +34,9 @@ function init(){
     document.querySelector("#img-scissors").src="../images/scissors-white-computer.jpg";
     roundCount++;
     divFinalResult.innerText = "Round #"+roundCount;
-    btnPlayAgain.disabled = "true";
-    btnNextRound.disabled = "true";
+    btnPlayAgain.style.opacity = "0";
+    btnNextRound.style.opacity = "0";
+    btnComputer.style.opacity = "0"
 }
 
 function updateScore(){
