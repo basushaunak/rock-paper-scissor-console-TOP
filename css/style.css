@@ -108,8 +108,9 @@ footer{
     width: 500px;
     min-height: 10rem;
     max-height: 10rem;
-    border: 1px yellow solid;
+    /* border: 1px yellow solid; */
     overflow-y: scroll;
+    font-size: 1.5rem;
 }
 #round-result > p{
     padding-inline-start: 10px;
@@ -121,11 +122,11 @@ footer{
     margin-block: 10px;
     margin-inline: auto;
     width: 500px;
-    min-height: 3rem;
-    max-height: 3rem;
-    border: 1px orange solid;
+    min-height: 2.5rem;
+    max-height: 2.5rem;
+    /* border: 1px orange solid; */
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -147,14 +148,5 @@ footer{
     width: 500px;
     display: flex;
     flex-direction: column;
-    margin-inline: auto;    
+    margin-inline: auto;
  }
-
-.icons {
-   display: inline-flex;
-   max-width: 1rem;
-   min-width: 1rem;
-   object-fit: cover;
-   align-items: center;
-   justify-content: center;
-}
