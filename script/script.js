@@ -39,12 +39,12 @@ function initGame(){
 function initRound(){
     playerChoice = -1;
     computerChoice = -1;
-    rock.src="../images/rock-white-player.png";
-    paper.src="../images/paper-white-player.png";
-    scissors.src="../images/scissors-white-player.png";
-    document.querySelector("#img-rock").src="../images/rock-white-computer.jpg";
-    document.querySelector("#img-paper").src="../images/paper-white-computer.jpg";
-    document.querySelector("#img-scissors").src="../images/scissors-white-computer.jpg";
+    rock.src="./images/rock-white-player.png";
+    paper.src="./images/paper-white-player.png";
+    scissors.src="./images/scissors-white-player.png";
+    document.querySelector("#img-rock").src="./images/rock-white-computer.jpg";
+    document.querySelector("#img-paper").src="./images/paper-white-computer.jpg";
+    document.querySelector("#img-scissors").src="./images/scissors-white-computer.jpg";
     roundCount++;
     btnPlayAgain.style.opacity = "0";
     btnNextRound.style.opacity = "0";
@@ -122,13 +122,13 @@ buttons.addEventListener("mouseover",(e)=>{
         let element = e.target.id;
         switch (element){
             case "rock":
-                rock.src="../images/rock-color-player.png";
+                rock.src="./images/rock-color-player.png";
                 break;
             case "paper":
-                paper.src="../images/paper-color-player.png";
+                paper.src="./images/paper-color-player.png";
                 break;
             case "scissors":
-                scissors.src="../images/scissors-color-player.png";
+                scissors.src="./images/scissors-color-player.png";
                 break;
             default:
                 break;
@@ -141,13 +141,13 @@ buttons.addEventListener("mouseout",(e)=>{
         let element = e.target.id;
         switch (element){
             case "rock":
-                rock.src="../images/rock-white-player.png";
+                rock.src="./images/rock-white-player.png";
                 break;
             case "paper":
-                paper.src="../images/paper-white-player.png";
+                paper.src="./images/paper-white-player.png";
                 break;
             case "scissors":
-                scissors.src="../images/scissors-white-player.png";
+                scissors.src="./images/scissors-white-player.png";
                 break;
             default:
                 break;
@@ -164,12 +164,12 @@ buttons.addEventListener("click",(e)=>{
         case "rock":
             if(playerChoice === 0){
                 playerChoice = -1;
-                rock.src="../images/rock-white-player.png";
+                rock.src="./images/rock-white-player.png";
                 btnComputer.style.opacity = "0";
             }else {
-                rock.src="../images/rock-color-player.png";
-                paper.src="../images/paper-white-player.png";
-                scissors.src="../images/scissors-white-player.png";
+                rock.src="./images/rock-color-player.png";
+                paper.src="./images/paper-white-player.png";
+                scissors.src="./images/scissors-white-player.png";
                 playerChoice = 0;
                 btnComputer.style.opacity = "100";
             }
@@ -177,12 +177,12 @@ buttons.addEventListener("click",(e)=>{
         case "paper":
             if(playerChoice === 1){
                 playerChoice = -1;
-                paper.src="../images/paper-white-player.png";
+                paper.src="./images/paper-white-player.png";
                 btnComputer.style.opacity = "0";
             }else {
-                paper.src="../images/paper-color-player.png";
-                rock.src="../images/rock-white-player.png";
-                scissors.src="../images/scissors-white-player.png";
+                paper.src="./images/paper-color-player.png";
+                rock.src="./images/rock-white-player.png";
+                scissors.src="./images/scissors-white-player.png";
                 playerChoice = 1;
                 btnComputer.style.opacity = "100";
             }
@@ -190,12 +190,12 @@ buttons.addEventListener("click",(e)=>{
         case "scissors":
             if(playerChoice === 2){
                 playerChoice = -1;
-                scissors.src="../images/scissors-white-player.png";
+                scissors.src="./images/scissors-white-player.png";
                 btnComputer.style.opacity = "0";
             }else {
-                scissors.src="../images/scissors-color-player.png";            
-                rock.src="../images/rock-white-player.png";
-                paper.src="../images/paper-white-player.png";
+                scissors.src="./images/scissors-color-player.png";            
+                rock.src="./images/rock-white-player.png";
+                paper.src="./images/paper-white-player.png";
                 playerChoice = 2;
                 btnComputer.style.opacity = "100";
             }
@@ -216,13 +216,13 @@ btnComputer.addEventListener("click",()=>{
     computerChoice=getRandomInteger(0,2);
     switch(computerChoice){
         case 0:
-            document.querySelector("#img-rock").src="../images/rock-color-computer.jpg";
+            document.querySelector("#img-rock").src="./images/rock-color-computer.jpg";
             break;
         case 1:
-            document.querySelector("#img-paper").src="../images/paper-color-computer.jpg";
+            document.querySelector("#img-paper").src="./images/paper-color-computer.jpg";
             break;
         case 2:
-            document.querySelector("#img-scissors").src="../images/scissors-color-computer.jpg";
+            document.querySelector("#img-scissors").src="./images/scissors-color-computer.jpg";
             break;
         default:
             break;
